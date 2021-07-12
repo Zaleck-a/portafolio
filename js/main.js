@@ -6,3 +6,10 @@ hamburger.addEventListener("click", function() {
   hamburger.classList.toggle("is-active");
   // Do something else, like open/close menu
 });
+
+
+const nav = document.querySelector('#nav');
+
+hamburger.addEventListener('click', function(e){
+    nav.classList.toggle('slide')
+});

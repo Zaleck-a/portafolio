@@ -32,7 +32,7 @@
 #header .top-header .logo{
     font-weight: 900;
     cursor: pointer;
-    
+    align-self: center;
 }
 
 #header .top-header a{
@@ -44,6 +44,11 @@
     float: right;
     margin-top: 15px;
     padding-bottom: 10px;
+    transition: 300ms;
+}
+
+.slide{
+    transform: translateX(120%);
 }
 
 #header nav ul{
@@ -127,6 +132,7 @@
 }
 
 #footer .social-media li{
+    cursor: pointer;
     padding: 0.2em 0.3em 0.1em;
     margin: 0.2em;
     background-color: black;
