@@ -1,25 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;900&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root{
+    --font-primary: Roboto;
+    --color-primary: #fff;
+    --color-secondary: rgba(122, 120, 120, 0.308);
+    --color-green: rgba(11, 169, 193, 0.65);
+    --color-dark: rgba(0, 0, 0, 0.65);
+    --color-background: rgb(36, 35, 35);
 }
 
-.main-container{
-    width: 100%;
-    height: 100vh;
-    background-color: rgb(36, 35, 35);
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-primary);
 }
+
 
 #header{
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 1em;
-    font-family: Roboto;
+    padding: 0 1em;
     font-size: 1.3rem;
-    color: white;
+    color: var(--color-primary);
 }
 
 #header .top-header{
@@ -30,19 +34,14 @@
 }
 
 #header .top-header .logo{
-    font-weight: 900;
-    cursor: pointer;
     align-self: center;
-}
-
-#header .top-header a{
+    font-weight: 900;
     cursor: pointer;
 }
 
 #header nav{
-    text-align: end;
     float: right;
-    margin-top: 15px;
+    text-align: end;
     padding-bottom: 10px;
     transition: 300ms;
 }
@@ -51,72 +50,84 @@
     transform: translateX(120%);
 }
 
-#header nav ul{
+#header nav ul li{
+    margin-top: 0.6em;
     list-style: none;
 }
 
-#header nav ul li{
-    margin-top: 0.6em;
-}
-
 #header nav ul li a{
-    cursor: pointer;
     padding: 0.2em 0.4em;
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: var(--color-dark);
+    cursor: pointer;
 }
 
 #header nav ul li a:hover{
-    background-color: rgba(11, 169, 193, 0.65);
+    background-color: var(--color-green);
 }
 
-.main-text{
-    max-width: 100%;
-    height: 100vh;
+
+
+/* CONTENIDO */
+
+.main-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: Roboto;
+    max-width: 100%;
+    height: 100vh;
     font-size: 3rem;
     font-weight: 900;
     letter-spacing: 5px;
     text-align: center;
-    color: white;
+    background-color: var(--color-background);
+    color: var(--color-primary);
 }
 
-.main-text div{
+.main-container div{
     max-width: 90%;
 }
 
-.main-text h4{
-    color: gray;
+.main-container h4{
     font-size: 1rem;
     font-weight: 300;
+    color: gray;
 }
 
-.main-text h2{
+.main-container h2{
     font-size: 6vmax;
 }
 
-.main-text span{
-    color: white;
+.main-container span{
+    color: var(--color-primary);
 }
 
-.main-text button{
-    background-color: rgba(11, 169, 193, 0.65);
+.main-container button{
     margin-top: 15px;
-    cursor: pointer;
-    font-weight: 100;
-    color: white;
-    border-radius: 2px; 
-    border: none;
     padding: 1em 1.5em;
     font-size: 1rem;
+    font-weight: 100;
+    background-color: var(--color-green);
+    border: none;
+    border-radius: 2px; 
+    cursor: pointer;
 }
 
-.main-text button:hover{
-    background-color: black;
+.main-container button a{
+    text-decoration: none;
+    color: var(--color-primary);
 }
+
+.main-container button:hover{
+    background-color: var(--color-dark);
+}
+
+
+
+
+
+
+/* FOOTER */
 
 #footer{
     position: fixed;
@@ -127,26 +138,26 @@
 }
 
 #footer .social-media{
-    list-style: none;
     display: flex;
+    list-style: none;
 }
 
 #footer .social-media li{
-    cursor: pointer;
     padding: 0.2em 0.3em 0.1em;
     margin: 0.2em;
-    background-color: black;
+    background-color: var(--color-dark);
+    cursor: pointer;
     transition: background-color 200ms;
 }
 
 #footer .social-media li:hover:nth-child(1){
-    background-color: rgba(122, 120, 120, 0.308);
+    background-color: var(--color-secondary);
 }
 
 #footer .social-media li:hover:nth-child(2){
-    background-color: rgba(63, 71, 184, 0.87);
+    background-color: var(--color-green);
 }
 
 #footer .social-media li i{
-    color: white;
+    color: var(--color-primary);
 }
