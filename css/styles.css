@@ -123,6 +123,7 @@ h3{
 
 #home div{
     max-width: 90%;
+    margin-top: -15px;
 }
 
 #home span{
@@ -167,28 +168,18 @@ h3{
 }
 
 .icon-wrapper {
-    position: absolute;
-    right: -15px;
-    bottom: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    bottom: 38px;
+    left: 28px;
     height: 17px;
     width: 17px;
     margin: 0 20px;
     color: #333;
-    background: var(--color-green);
+    background: rgba(11, 169, 193);
     box-shadow: 0 0 0px 0px rgba(255, 255, 255, 0.5);
     border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
+    cursor: pointer;
     transition: 250ms color;
-    -webkit-transition: 250ms color;
-    -moz-transition: 250ms color;
-    -ms-transition: 250ms color;
-    -o-transition: 250ms color;
     animation-name: wave;
     animation-duration: 1s;
     animation-timing-function: linear;
@@ -228,7 +219,7 @@ h3{
     margin-top: 15px;
     padding: 1em 1.5em;
     font-size: 1rem;
-    font-weight: 100;
+    font-weight: 300;
     background-color: var(--color-green);
     border: none;
     border-radius: 2px; 
