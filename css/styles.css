@@ -44,6 +44,55 @@ h3{
     font-size: 4vmax;
 }
 
+.preloader-contain{
+    position: absolute;
+    background-color: black;
+    color: #fff;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    visibility: visible;
+    opacity: 1;
+    transition: all 200ms;
+    z-index: 9999;
+}
+
+.preloader-contain p{
+    letter-spacing: 1px;
+}
+.close{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.preloader{
+    position: relative;
+    width: 200px;
+    background-color: #333;
+    height: 6px;
+}
+
+.preloader::before{
+    content: '';
+    position: absolute;
+    background-color: rgba(11, 169, 193);
+    width: 0%;
+    height: 6px;
+    animation: preloader 2s infinite;
+}
+
+@keyframes preloader{
+
+    100%{
+        width: 100%;
+    }
+}
+
+
 #header{
     position: fixed;
     top: 0;

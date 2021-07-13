@@ -1,5 +1,21 @@
+// Preloader
+const preloaderContain = document.querySelector('#preloader-contain');
+const percent = document.querySelector('#percent')
+let flag = 0;
+
+setInterval(() => {
+  percent.textContent = `${flag}%`
+  if(flag < 100){
+    flag++
+  }
+}, 15);
+
+setTimeout(()=>{
+  preloaderContain.classList.add('close');
+}, 2000)
+
 // Look for .hamburger
-var hamburger = document.querySelector(".hamburger");
+const hamburger = document.querySelector(".hamburger");
 // On click
 hamburger.addEventListener("click", function() {
   // Toggle class "is-active"
