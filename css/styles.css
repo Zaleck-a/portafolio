@@ -383,15 +383,51 @@ h3{
 
 /*about-me*/
 #about-me{
-    background-color:#00bdff;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    background-image: url('../img/background-about-me.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
     color:white;  
 }
+
+.content-about{
+    min-width: 270px;
+    width: 40%;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding: 20px 15px 25px 25px;
+    border-radius: 10px;
+    background-color: var(--color-dark);
+}
+
 
 
 /*contact*/
 #contact{
-    background-color:white;
-    color:#00bdff;  
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    background-image: url('../img/pexels-klaudia-ekert-4724487.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color:white;  
+}
+
+.center{
+    flex-direction: column;
+    justify-content: center;
+    background: none;
+    margin: 0 auto;
+    text-align: center;
+    gap: 5px;
+    margin-bottom: 50px;
+}
+
+#contact a{
+    
+     margin: 10px auto;
 }
 
 
@@ -402,8 +438,6 @@ h3{
     font-size:3em;
     width:100%;
     height:0;
-    -webkit-transition: all 500ms ease-out;
-    -moz-transition:all 500ms ease-out;
     transition: all 500ms ease-out;
 }
 
