@@ -82,7 +82,7 @@ h3{
     background-color: rgba(11, 169, 193);
     width: 0%;
     height: 6px;
-    animation: preloader 2s infinite;
+    animation: preloader 2s 1;
 }
 
 @keyframes preloader{
@@ -148,7 +148,7 @@ h3{
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 1.4em 1.4em;
+    padding: 1.4em 1.4em 0;
     font-size: 1.3rem;
     color: var(--color-primary);
     z-index: 1;
@@ -171,16 +171,17 @@ h3{
 }
 
 #header nav{
-    float: right;
+    position: absolute;
+    right: 0;
     text-align: end;
-    margin-top: 10px;
+    margin: 0.8em 1.6em 0 0;
     padding-bottom: 10px;
     font-size: 1.2rem;
     transition: 300ms;
 }
 
 .slide{
-    transform: translateX(120%);
+    transform: translateX(122%);
 }
 
 #header nav ul li{

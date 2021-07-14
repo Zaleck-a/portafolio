@@ -8,7 +8,7 @@ setInterval(() => {
   if(flag < 100){
     flag++
   }
-}, 17);
+}, 15);
 
 setTimeout(()=>{
   preloaderContain.classList.add('close');
