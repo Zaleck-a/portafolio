@@ -92,6 +92,57 @@ h3{
     }
 }
 
+/*MODAL*/
+
+.modal-contain{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.63);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 300ms;
+    z-index: 2;
+}
+
+.visible{
+    visibility: visible;
+    opacity: 1; 
+}
+
+.modal-contain button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1.2em;
+    padding: 0.1em 0.7em;
+    font-size: 1.5em;
+    border: none;
+    color: #fff;
+    background-color: #000;
+    cursor: pointer;
+}
+
+.modal{
+    min-width: 200px;
+    width: 400px;
+    height: 70%;
+    margin: 2em;
+    background-image: url('../img/picture_portafolio.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.modal-contain button:hover{
+    background-color: rgba(11, 169, 193);
+}
+
+
+/*MENU*/
 
 #header{
     position: fixed;
@@ -100,7 +151,7 @@ h3{
     padding: 1.4em 1.4em;
     font-size: 1.3rem;
     color: var(--color-primary);
-    z-index: 2;
+    z-index: 1;
 }
 .hamburger, .hamburger--collapse{
     padding: 0 !important;

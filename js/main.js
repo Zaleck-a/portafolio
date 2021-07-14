@@ -8,11 +8,28 @@ setInterval(() => {
   if(flag < 100){
     flag++
   }
-}, 15);
+}, 17);
 
 setTimeout(()=>{
   preloaderContain.classList.add('close');
 }, 2000)
+
+
+// MODAL
+
+const profile = document.querySelector('.profile');
+const modalContain = document.querySelector('#modal-contain');
+
+profile.addEventListener('click', () =>{
+  modalContain.classList.add('visible')
+})
+
+modalContain.addEventListener('click', () =>{
+  if(modalContain.classList.contains('visible')){
+    modalContain.classList.remove('visible');
+  }
+})
+
 
 // Look for .hamburger
 const hamburger = document.querySelector(".hamburger");
