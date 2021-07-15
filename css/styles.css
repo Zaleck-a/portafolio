@@ -402,9 +402,16 @@ h3{
     background-color: var(--color-dark);
 }
 
+.content-about a{
+    border-radius: 25px;
+}
 
+.content-about h4{
+    letter-spacing: 1px;
+    font-size: 1.6vmax;
+}
 
-/*contact*/
+/*CONTACT*/
 #contact{
     position: absolute;
     display: flex;
@@ -430,6 +437,15 @@ h3{
      margin: 10px auto;
 }
 
+
+#contact ul{
+    margin-top: 10px;
+    list-style: none;
+    font-size: 1.6vmax;
+}
+#contact ul li{
+    margin-bottom: 5px;
+}
 
 
 .efect{
