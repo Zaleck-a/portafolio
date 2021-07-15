@@ -316,7 +316,7 @@ h3{
     opacity: 1;
 }
 
-.btn-portafolio{
+.btn-primary{
     margin-top: 15px;
     padding: 1em 1.5em;
     font-size: 1rem;
@@ -330,7 +330,7 @@ h3{
     color: var(--color-primary);
 }
 
-.btn-portafolio:hover{
+.btn-primary:hover{
     background-color: var(--color-dark);
 }
 
@@ -353,19 +353,19 @@ h3{
 }
 
 #portafolio .content-images{
+    position: relative;
     display: flex;
     width: 100%;
-    flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 30px;
 }
 
 #portafolio .content-images .img{
-    width: calc(100% / 3 - 7px);
+    width: 32%;
     height: 130px;
     cursor: pointer;
-    overflow:hidden;
+    overflow: hidden;
 }
 
 #portafolio .content-images .img img{
@@ -380,12 +380,19 @@ h3{
     opacity: 0.3;
 }
 
+.content-images .hover{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32%;
+    height: 130px;
+    background-color: #979394;
+}
+
 
 /*about-me*/
 #about-me{
-    position: absolute;
-    display: flex;
-    align-items: center;
     background-image: url('../img/background-about-me.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -393,22 +400,29 @@ h3{
 }
 
 .content-about{
-    min-width: 270px;
-    width: 40%;
-    margin-left: 1em;
+    position: absolute;
+    top: 18%;
+    left: 12%;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    max-height: 70%;
+    padding: 20px 30px;
     margin-right: 1em;
-    padding: 20px 15px 25px 25px;
     border-radius: 10px;
-    background-color: var(--color-dark);
+    background-color: var(--color-dark); 
+    overflow: hidden;
 }
 
 .content-about a{
+    width: 130px;
+    text-align: center;
     border-radius: 25px;
 }
 
 .content-about h4{
     margin-top: 10px;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
 }
 
 /*CONTACT*/
@@ -429,11 +443,14 @@ h3{
     margin: 0 auto;
     text-align: center;
     gap: 5px;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 
 #contact a{
-     margin: 10px auto;
+    margin: 10px auto;
+    width: 130px;
+    text-align: center;
+    border-radius: 25px;
 }
 
 
@@ -504,5 +521,11 @@ h3{
     #portafolio .content-images .img{
         width: calc(100% / 2 - 7px);
         height: 90px;
+    }
+}
+
+@media (max-width: 370px){
+    .content-about{
+        overflow: auto;
     }
 }
