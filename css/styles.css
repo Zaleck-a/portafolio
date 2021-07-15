@@ -104,7 +104,7 @@ h3{
     background-color: rgba(0, 0, 0, 0.63);
     visibility: hidden;
     opacity: 0;
-    transition: all 300ms;
+    transition: all 500ms;
     z-index: 2;
 }
 
@@ -177,7 +177,7 @@ h3{
     margin: 0.8em 1.6em 0 0;
     padding-bottom: 10px;
     font-size: 1.2rem;
-    transition: 300ms;
+    transition: 500ms;
 }
 
 .slide{
@@ -246,7 +246,7 @@ h3{
     background-repeat: no-repeat;
     background-position-y: -20px;
     cursor: pointer;
-    transition: all 300ms;
+    transition: all 500ms;
 }
 
 #home .profile div{
@@ -307,7 +307,7 @@ h3{
     transform: translateX(50%);
     visibility: hidden;
     opacity: 0;
-    transition: all 300ms;
+    transition: all 500ms;
 }
 
 .icon-wrapper:hover::after{
@@ -365,7 +365,6 @@ h3{
     position: relative;
     width: 32%;
     height: 130px;
-    cursor: pointer;
     overflow: hidden;
 }
 
@@ -373,29 +372,54 @@ h3{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: all 300ms;
-}
-
-#portafolio .content-images .img img:hover{
-    transform: scale(1.3);
-    opacity: 0.3;
 }
 
 .content-images .hover{
     position: absolute;
+    top: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 32%;
-    height: 130px;
-    background-color: #979394;
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    font-size: 0.25em;
+    text-align: center;
+    background-color: rgba(36, 35, 35, 0.970);
+    overflow: hidden;
+    transform: translateY(-100%);
+    transition: transform 500ms;
 }
+
+.content-images .hover a{
+    right: 0;
+    bottom: 0;
+    margin-top: 10px;
+    padding: 5px;
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.content-images .hover a:hover{
+    background-color: var(--color-green)
+}
+
+.content-images .img:hover .hover{
+    transform: translateY(0%);
+}
+
+
+
 
 
 /*about-me*/
 #about-me{
     background-image: url('../img/background-about-me.jpg');
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     color:white;  
 }
@@ -433,6 +457,7 @@ h3{
     align-items: flex-end;
     background-image: url('../img/pexels-klaudia-ekert-4724487.jpg');
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     color:white;  
 }
@@ -499,7 +524,7 @@ h3{
     margin: 0.2em;
     background-color: var(--color-dark);
     cursor: pointer;
-    transition: background-color 200ms;
+    transition: background-color 500ms;
 }
 
 #footer .social-media li:hover:nth-child(1){
@@ -528,5 +553,10 @@ h3{
 @media (max-width: 370px){
     .content-about{
         overflow: auto;
+    }
+}
+@media (max-width: 630px){
+    .content-images .hover{
+        font-size: 0.17em;
     }
 }
