@@ -393,18 +393,28 @@ h3{
 }
 
 .content-images .hover a{
-    right: 0;
-    bottom: 0;
     margin-top: 10px;
     padding: 5px;
     text-decoration: none;
-    background-color: #000;
+    background-color: var(--color-green);
+    border-radius: 10px;
+    text-align: center;
     color: #fff;
     cursor: pointer;
+    transform: translateY(500%);
+    opacity: 0;
+    transition-property: transform, opacity;
+    transition-duration: 1s;
 }
 
+.content-images .img:hover .hover a{
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+
 .content-images .hover a:hover{
-    background-color: var(--color-green)
+    background-color: var(--color-dark)
 }
 
 .content-images .img:hover .hover{
@@ -452,24 +462,27 @@ h3{
 
 /*CONTACT*/
 #contact{
-    position: absolute;
     display: flex;
     align-items: flex-end;
     background-image: url('../img/pexels-klaudia-ekert-4724487.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color:white;  
+    color:white;
+}
+
+.content-contact{
+    display: flex;
 }
 
 .center{
     flex-direction: column;
     justify-content: center;
     background: none;
+    padding-bottom: 50px;
     margin: 0 auto;
     text-align: center;
     gap: 5px;
-    margin-bottom: 60px;
 }
 
 #contact a{
