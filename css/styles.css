@@ -346,6 +346,7 @@ h3{
 #portafolio{
     background-color:black;
     color:var(--color-primary);
+    overflow: hidden;
 }
 
 #portafolio .content-portafolio{
@@ -439,7 +440,8 @@ h3{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color:white;  
+    color:white;
+    overflow: hidden;
 }
 
 .content-about{
@@ -477,6 +479,7 @@ h3{
     background-position: center;
     background-repeat: no-repeat;
     color:white;
+    overflow: hidden;
 }
 
 .content-contact{
